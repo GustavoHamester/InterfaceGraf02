@@ -5,6 +5,7 @@
  */
 package interfacegrafica;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -98,6 +99,11 @@ public class frm_Agenda extends javax.swing.JFrame {
         });
 
         btnExcluir.setText("Excluir");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         btnAtualizar.setText("Atualizar");
 
@@ -175,12 +181,21 @@ public class frm_Agenda extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomeActionPerformed
 
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
-        
+
         DefaultTableModel dtmAgenda = (DefaultTableModel) tbLista.getModel();
         Object[] dados = {txtNome.getText(), txtTelefone.getText()};
         dtmAgenda.addRow(dados);
-        
+
     }//GEN-LAST:event_btnInserirActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        if (tbLista.getSelectedRow() != -1) {
+            DefaultTableModel dtmAgenda = (DefaultTableModel) tbLista.getModel();
+            dtmAgenda.removeRow(tbLista.getSelectedRow());
+        }else{
+            JOptionPane.showMessageDialog(null, "Selecione um Registro p/ Excluir");
+        }
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
     /**
      * @param args the command line arguments
