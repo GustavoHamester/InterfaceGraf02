@@ -29,170 +29,122 @@ public class frm_Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        txtNum1 = new javax.swing.JTextField();
-        txtNum2 = new javax.swing.JTextField();
-        txtResultado = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        btnCalcular = new javax.swing.JButton();
-        rbSomar = new javax.swing.JRadioButton();
-        rbSubtrair = new javax.swing.JRadioButton();
-        rbMultiplicar = new javax.swing.JRadioButton();
-        rbDividir = new javax.swing.JRadioButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        menuCadastrar = new javax.swing.JMenuItem();
+        menuSair = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Senac");
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setTitle("Geral");
+        setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 26)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Senac");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setText("Valor A:");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfacegrafica/Captura de tela 2022-09-23 193428.png"))); // NOI18N
 
-        jLabel3.setText("Valor B:");
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(99, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(126, Short.MAX_VALUE))
+        );
 
-        txtNum2.addActionListener(new java.awt.event.ActionListener() {
+        jMenu1.setText("Arquivo");
+
+        menuCadastrar.setText("Cadastrar");
+        menuCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNum2ActionPerformed(evt);
+                menuCadastrarActionPerformed(evt);
             }
         });
+        jMenu1.add(menuCadastrar);
 
-        txtResultado.setEditable(false);
-
-        jLabel4.setText("Resultado");
-
-        btnCalcular.setText("Calcular");
-        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+        menuSair.setText("Sair");
+        menuSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcularActionPerformed(evt);
+                menuSairActionPerformed(evt);
             }
         });
+        jMenu1.add(menuSair);
 
-        buttonGroup1.add(rbSomar);
-        rbSomar.setText("Somar");
+        jMenuBar1.add(jMenu1);
 
-        buttonGroup1.add(rbSubtrair);
-        rbSubtrair.setText("Subtrair");
+        jMenu2.setText("Aplicativos");
 
-        buttonGroup1.add(rbMultiplicar);
-        rbMultiplicar.setText("Multiplicar");
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
+        jMenuItem3.setText("Calculadora");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem3);
 
-        buttonGroup1.add(rbDividir);
-        rbDividir.setText("Dividir");
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Sobre");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtResultado, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                            .addComponent(txtNum2)
-                            .addComponent(txtNum1))
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rbMultiplicar)
-                            .addComponent(rbDividir)
-                            .addComponent(rbSubtrair)
-                            .addComponent(rbSomar)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(btnCalcular)))
-                .addContainerGap(61, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(txtNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(76, 76, 76)
-                        .addComponent(btnCalcular))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(rbSomar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbSubtrair)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbMultiplicar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rbDividir)))
-                .addGap(0, 82, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNum2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNum2ActionPerformed
-
-    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
-        String a = txtNum1.getText();
-        String b = txtNum2.getText();
-
-        int n1 = Integer.parseInt(a);
-        int n2 = Integer.parseInt(b);
-
-        if (rbSomar.isSelected()) {
-            int calculo = n1 + n2;
-
-            String c = String.valueOf(calculo);
-
-            txtResultado.setText(c);
-
-        }else if (rbSubtrair.isSelected()){
-            int calculo = n1-n2;
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         
-        String c = String.valueOf(calculo);
-        
-        txtResultado.setText(c);
+        frm_Calculadora calc = new frm_Calculadora();
+        calc.setVisible(true);
+       
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-        }else if (rbMultiplicar.isSelected()) {
-            int calculo = n1*n2;
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
         
-        String c = String.valueOf(calculo);
+        JOptionPane.showMessageDialog(null, "Versão 1.0");
         
-        txtResultado.setText(c);
+    }//GEN-LAST:event_jMenu3MouseClicked
 
-        }else if (rbDividir.isSelected()) {
-            int calculo = n1/n2;
+    private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
+
+        System.exit(0);
         
-        String c = String.valueOf(calculo);
-        
-        txtResultado.setText(c);
+    }//GEN-LAST:event_menuSairActionPerformed
 
-        }else {
-            JOptionPane.showMessageDialog(null,"Selecione uma operação!");
-        }
-
-
-    }//GEN-LAST:event_btnCalcularActionPerformed
+    private void menuCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastrarActionPerformed
+        frm_Agenda agenda = new frm_Agenda();
+        agenda.setVisible(true);
+    }//GEN-LAST:event_menuCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,18 +182,14 @@ public class frm_Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalcular;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JRadioButton rbDividir;
-    private javax.swing.JRadioButton rbMultiplicar;
-    private javax.swing.JRadioButton rbSomar;
-    private javax.swing.JRadioButton rbSubtrair;
-    private javax.swing.JTextField txtNum1;
-    private javax.swing.JTextField txtNum2;
-    private javax.swing.JTextField txtResultado;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenuItem menuCadastrar;
+    private javax.swing.JMenuItem menuSair;
     // End of variables declaration//GEN-END:variables
 }
