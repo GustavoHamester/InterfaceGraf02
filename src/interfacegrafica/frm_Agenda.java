@@ -89,6 +89,11 @@ public class frm_Agenda extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tbLista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbListaMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tbLista);
 
         btnInserir.setText("Inserir");
@@ -106,6 +111,11 @@ public class frm_Agenda extends javax.swing.JFrame {
         });
 
         btnAtualizar.setText("Atualizar");
+        btnAtualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtualizarActionPerformed(evt);
+            }
+        });
 
         try {
             txtTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) # ####-####")));
@@ -196,6 +206,25 @@ public class frm_Agenda extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Selecione um Registro p/ Excluir");
         }
     }//GEN-LAST:event_btnExcluirActionPerformed
+
+    private void tbListaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbListaMouseClicked
+       
+        if (tbLista.getSelectedRow() != -1) {
+            txtNome.setText(tbLista.getValueAt(tbLista.getSelectedRow(), 0).toString());
+            txtTelefone.setText(tbLista.getValueAt(tbLista.getSelectedRow(), 1).toString());
+            
+        }
+    }//GEN-LAST:event_tbListaMouseClicked
+
+    private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarActionPerformed
+       if (tbLista.getSelectedRow() != -1) {
+           
+           tbLista.setValueAt(txtNome.getText(), tbLista.getSelectedRow(), 0);
+           tbLista.setValueAt(txtTelefone.getText(), tbLista.getSelectedRow(), 1);
+           
+           
+       } 
+    }//GEN-LAST:event_btnAtualizarActionPerformed
 
     /**
      * @param args the command line arguments
